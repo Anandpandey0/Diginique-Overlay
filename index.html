@@ -112,7 +112,7 @@
                 <input type="text" placeholder="Name" class="form-input user-name" required>
                 <input type="email" placeholder="Email" class="form-input user-email" required>
                 <input type="tel" placeholder="Phone" class="form-input user-phone" pattern="[1-9][0-9]{9}"
-                    maxlength="10" required>
+                    maxlength="10" oninvalid="setCustomValidity('Please enter a valid 10-digit phone number')" required>
                 <button type="submit">Download</button>
             </form>
         </div>
