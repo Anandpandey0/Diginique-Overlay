@@ -33,21 +33,19 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #fff;
+            background-color: #FFFFFF;
             padding: 20px;
             border-radius: 5px;
             text-align: center;
-            max-width: 500px;
-            width: 90%;
-            max-height: 80%;
-            overflow-y: auto;
+            height: 500px;
+            width: 600px;
         }
 
         .close-btn {
             position: absolute;
             top: 10px;
             right: 10px;
-            font-size: 24px;
+            font-size: 50px;
             cursor: pointer;
         }
 
@@ -61,37 +59,30 @@
             }
         }
 
-        .form-input {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-
-        .form-submit {
-            display: block;
-            width: 100%;
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .form-submit:hover {
-            background-color: #3e8e41;
-        }
-
         .form-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
+            border: solid 2px red;
+            margin-top: 4rem;
+        }
+
+        form {
+            display: flex;
+            /* border: solid 2px black; */
+            flex-direction: column;
+            height: 80%;
+            justify-content: space-evenly;
+        }
+
+        form>input,
+        form>button {
+            padding: 1rem;
+            font-size: large;
+        }
+
+        form>button {
+            border-radius: 2rem;
+            background: #e3a72f;
+            color: white;
+            border: none;
         }
     </style>
 </head>
@@ -104,12 +95,12 @@
     <div id="overlay" class="overlay">
         <div class="overlay-content">
             <span class="close-btn" onclick="closeOverlay()">&times;</span>
-            <h2 class="form-title">Contact Us</h2>
+            <h1 class="form-title">Detailed Curriculum !</h1>
             <form>
-                <input type="text" placeholder="Name" class="form-input" required>
-                <input type="email" placeholder="Email" class="form-input" required>
-                <input type="tel" placeholder="Phone" class="form-input" required>
-                <button type="submit" class="form-submit">Submit</button>
+                <input type="text" placeholder="Name" class="form-input user-name" required>
+                <input type="email" placeholder="Email" class="form-input user-email" required>
+                <input type="tel" placeholder="Phone" class="form-input user-phone" required>
+                <button type="submit" class="form-submit">Download</button>
             </form>
         </div>
     </div>
