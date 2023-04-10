@@ -49,15 +49,7 @@
             cursor: pointer;
         }
 
-        @media only screen and (max-width: 768px) {
-            .overlay-content {
-                max-height: fit-content;
-                width: 80%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
+
 
         .form-title {
             border: solid 2px red;
@@ -84,6 +76,22 @@
             color: white;
             border: none;
         }
+
+        @media only screen and (max-width: 768px) {
+            .overlay-content {
+                max-height: 80%;
+                width: 80%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            form>input,
+            form>button {
+                padding: 0.5rem;
+                font-size: medium;
+            }
+        }
     </style>
 </head>
 
@@ -95,7 +103,7 @@
     <div id="overlay" class="overlay">
         <div class="overlay-content">
             <span class="close-btn" onclick="closeOverlay()">&times;</span>
-            <h1 class="form-title">Detailed Curriculum !</h1>
+            <h2 class="form-title">Detailed Curriculum !</h2>
             <form>
                 <input type="text" placeholder="Name" class="form-input user-name" required>
                 <input type="email" placeholder="Email" class="form-input user-email" required>
